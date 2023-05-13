@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CICLO WHILE</title>
+    <!-- link de sitio Sweetalert mensajes más elegantes-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <img src="./Image20230429072858.png" alt="" width="150" height="150">
+        <h1>BOLETIN DE NOTAS PROGRAMACIÓN</h1>
+        <h2>MATERIA PAE JAVASCRIPT</h2>
+        <br><br>
+        <p>Las notas del estudiante son: [1=DESEMPEÑO], 2=TALLERES, 3=EXAMENES]</p>
+        <script>
+            let nota_STD, suma, prom;//variables para calcular notas final PAE
+            suma=0;
+            prom=0;
+            num=1;
+            //Entrada
+            nomb_std=prompt("INGRESE NOMBRE ESTUDIANTE...");
+            //Proceso del cliclo While, para ingresar las tres notas std
+            while (num<=3){
+                nota_STD=parseFloat(prompt("INGRESE NOTA STD..."));
+                suma+=nota_STD;//Acumula o suma notas del std suma=suma+nota_std
+                num++;//contador de nota std - esto es igual a num=num+1
+            }
+            //Calcular promedio de notas del estudiante
+            prom=suma/3;
+            //validar si aprueba o reprueba
+            if (prom>=3.0){
+                swal("Apreciado estudiante","ABROBASTE LA MATERIA PAE","success");
+            }else{
+                swal("Apreciado estudiante","REPROBASTE LA MATERIA PAE","error");
+            }
+            // Salida
+            document.write ("<br>");
+            document.write ("NOTA FINAL MATERIA PAE JAVASCRIPT..."+prom.toFixed(2));
+        </script>
+    </center>
+</body>
+</html>

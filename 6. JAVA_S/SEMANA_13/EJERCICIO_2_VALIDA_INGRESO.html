@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CICLO FOR CONTRASEÑA</title>
+    <!-- link de sitio Sweetalert mensajes más elegantes-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <h1>VALIDACIÓN INGRESO SESIÓN</h1>
+        <h3>CICLO FOR CONTRASEÑA</h3>
+        <p>Usuario tendrá 3 intentos disponibles para ingreso</p>
+        <br><br>
+        <script>
+            let datof;//contraseña ingresada por el usuario
+            let sw=0;// switche apagado (para verifciar ingresos,estados encendido apagado)
+            let clave=123;//password sistema
+            //CICLO FOR
+            for(f=1;f<=3;f++){
+                datof=parseInt(prompt("INGRESE CONTRASEÑA DEL SISTEMA"));
+                if(datof==clave){
+                    swal("Estimado usuario","ACCESO PERMITIDO","success");
+                    document.write("ACCESO PERMITIDO");
+                    sw=1; //cambia el estado de switche a prendido - cambio valor-
+                    break;//con esta palabra finaliza script
+                }
+            }
+                //
+                if(sw==0){
+                    swal("Estimado usuario","ACCESO BLOQUEADO","error");
+                document.write("ACCESO BLOQUEADO");
+            }    
+        </script>
+    </center>
+</body>
+</html>

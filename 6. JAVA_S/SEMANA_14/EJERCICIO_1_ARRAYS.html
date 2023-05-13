@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAPTURA / LECTURA</title>
+</head>
+<body>
+    <center>
+        <h1>CREACION - LECTURA ARRAUY</h1>
+        <h2>CICLO FOR</h2>
+        <p>A CONTINUACION SE IMPRIMEN LOS DATOS ALMACENADOS EN ARRAY</p>
+        <script>
+            //CREACION
+            let datos=new Array();//con esto se crea nuevo objeto array.
+            let num;//Esta es la variable longitud ingresada por usuario por teclado.
+            //Como se ingresa información a un array
+            //CAPTURA en este ejercicio se calcula de forma manual la longitud del array
+            num=parseInt(prompt("INGRESE CANTIDAD DE ELEMENTOS A GUARDAR EN ARRAY"));
+            for(i=0;i<num;i++){
+                datos[i]=prompt("INGRESE DATO A GUARDAR")
+            }
+            //LECTURA
+            for(i=0;i<num;i++){
+                document.write("<br>"+"<br>");
+                document.write("Indice.."+i+"&nbsp"+datos[i]+"<br>");
+                console.log(datos[i]);
+            }
+        </script>
+    </center>
+</body>
+</html>

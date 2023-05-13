@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METODO SPLICE ARRAYS</title>
+</head>
+<body>
+    <center>
+        <img src="./img/Image20230429072858.png" alt="" width="150" height="150">
+        <h1>METODO SPLICE ARRAYS</h1>
+    <h2>BUSQUEDA / ELIMINACION DE ELEMENTO</h2>
+    <br><br>
+    <p>EL NUEVO ARRAYS ES EL SIGUIENTE...</p>
+    <script>
+        //creación
+    let num;
+    let std=new Array();
+    //captura
+    num=parseInt(prompt("INGRESE CANTIDAD DE ELEMENTOS A GUARDAR.."));
+    for(i=0;i<num;i++){
+        std[i]=prompt("INGRESE NOMBRE STD A GUARDAR");
+    }
+    //BUSQUEDA
+    let datob=prompt("INGRESE NOMBRE DEL ESTUDIANTE A ELIMINAR");
+    // el metodo trim es para eliminar espacios al final y al inicio del dato
+    let find=std.indexOf(datob.trim());
+    //APLICAR METODO SPLICE
+    if (find>-1){
+            let index=std.splice(find,1);//Eliminar en la ubicacion en que lo encontro
+            alert("STD ELIMINADO EXITOSAMENTE..."+"\n"+"LISTA NUEVA..."+std);
+        }else{
+            alert("ERROR..No se encontró Dato en array" );  
+        }
+        document.write(datos+",");
+        console.log(std);
+</script>
+    </center>
+
+</body>
+</html>
